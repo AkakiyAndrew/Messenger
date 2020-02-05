@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		{% block title %}
+			<title>Уберпростой мессенджер</title>
+		{% endblock %}
+
+		{% load staticfiles %}
+		<link href="{% static "web/base_style.css" %}" rel="stylesheet" type="text/css" >
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			body {
+			  margin: 0;
+			  font-family: Arial, Helvetica, sans-serif;
+			}
+		   
+		</style>
+	</head>
+
+	<body>
+
+		<div class="topnav">
+		  <a href="/web/logout/">Выход</a> 
+		  <n>ÜberEinfacheMessenger</n>
+
+		  {% block extra_button %}
+		  {% endblock %}
+			{% block extra_button_2 %}
+			{% endblock %}
+
+
+		</div>
+
+		{% block list %}	<!-- для вывода списка участников (можно применить стиль) -->
+		{% endblock %}
+
+		{% block content %} <!-- для вывода списка чата/сообщений (можно применить стиль)-->
+		{% endblock %}
+
+		{% block window %}	<!-- для логина/регистрации/вывода сообщений/доп. полей ввода (стили применить на месте) -->
+		{% endblock %}
+
+	</body>
+</html>
+
+

@@ -1,0 +1,14 @@
+{% extends 'web/base.html' %}
+
+{% block title %}
+    <title>Logout</title>
+{% endblock %}
+
+{% block window %}
+<div class="block_message">
+	<body>
+		<p> You logged out</p>
+		<a href="{% url 'web:auth' %}"> Click here to login again </a>
+	</body>
+</div>
+{% endblock %}

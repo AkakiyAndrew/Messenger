@@ -1,0 +1,12 @@
+{% extends 'web/base.html' %}
+
+{% block title %}    
+	<title>Authorisation error</title> 
+{% endblock %}
+
+{% block window %}
+	<div class="block_message">
+		<p> {{ context }}</p>
+		<a href="{% url 'web:auth' %}"> Click here to repeat </a>
+	</div>
+{% endblock %}

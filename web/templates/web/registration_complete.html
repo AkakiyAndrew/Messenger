@@ -1,0 +1,16 @@
+{% extends 'web/base.html' %}
+
+{% block title %}    
+	<title>Registration complete</title> 
+{% endblock %}
+
+{% block window %}
+<div class="block_message">
+	</head>
+		<body>
+			<p> Registration complete, now you can log at:</p>
+			<a href="{% url 'web:auth' %}"> Click here to proceed </a>
+		</body>
+	</html>
+</div>
+{% endblock %}

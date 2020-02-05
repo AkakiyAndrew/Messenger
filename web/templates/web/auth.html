@@ -1,0 +1,36 @@
+{% extends 'web/base.html' %}
+
+{% block title %}    
+	<title>Authorisation</title> 
+{% endblock %}
+
+{% block window %}
+
+<style>
+	body {
+
+	background-image: url({% load staticfiles %} "{% static "web/index.gif" %}");
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #faa460;
+	}
+		   
+</style>
+
+<div class="block_auth">
+	<form method="post">
+		{% csrf_token %}
+	    <table >
+			{{ form }}
+			<tr>
+				<td colspan="2">
+					<input class="button_login" type="submit" name="login" value="Login"/>
+					<a class="button_registration" href="/web/auth/new/">registration</a>
+				</td>
+			</tr>
+	    </table>
+	</form>
+</div>
+
+
+{% endblock %}

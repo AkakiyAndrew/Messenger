@@ -1,0 +1,261 @@
+.block_auth {
+font-size: 20px;
+margin-top: 100px;
+margin-left: auto;
+margin-right: auto; 
+width: 300px;
+height: 170px;
+border: 5px double grey;
+background-color: #fff8dc; 
+} 
+
+ .block_message {
+font-size: 25px;
+font-style:normal;
+font-weight:700;
+text-align: center;
+margin-top: 100px;
+margin-left: auto;
+margin-right: auto; 
+width: 300px;
+height: 170px;
+border: 5px double grey; 
+} 
+
+.button_login {
+  display: inline-block;
+  color: black;
+  font-weight: 700;
+  margin-left: 40%;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+} 
+.button_login:hover { background: rgba(255,255,255,.2); }
+.button_login:active { background: white; 
+}
+
+.button_registration {display: inline-block;
+  color: black;
+  font-weight: 700;
+  margin-left: 20%;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+}
+
+.button_registrati:hover { background: rgba(255,255,255,.2); }
+.button_registrati:active { background: white; 
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #202225;
+}
+
+.button_chat{
+	 color: black;
+  font-weight: 700;
+  margin-left: 20%;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 2px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+}
+
+.chat_list {
+width: 50%;
+margin: 10px;
+margin-right: auto;
+margin-left: auto;
+border: 2px double #051221;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 17px 18px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.topnav a:hover {
+  background-color: #ff0000;
+  color: black;
+}
+
+.topnav n {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.border {
+list-style: none;
+padding: 0;
+}
+
+.border li {
+font-family: "Trebuchet MS", "Lucida Sans";
+padding: 7px 20px;
+margin-bottom: 10px;
+border-radius: 5px;
+box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+     -2px -2px 5px 0 rgba(0,0,0,.1),
+    2px 2px 5px 0 rgba(0,0,0,.1),
+    -2px 2px 5px 0 rgba(0,0,0,.1);
+font-size: 17px;
+letter-spacing: 1px;
+transition: 0.3s all linear;
+}
+
+.border li:hover {
+	color: #8c898d;
+}
+
+ .rectangle {
+counter-reset: li; 
+list-style: none; 
+font: 14px "Trebuchet MS", "Lucida Sans";
+padding: 0;
+text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+.rectangle a {
+position: relative;
+display: block;
+padding: .4em .4em .4em .8em;
+margin: .5em 0 .5em 2.5em;
+background: #D3D4DA;
+color: #444;
+text-decoration: none;
+transition: all .3s ease-out;
+}
+.rectangle a:hover {background: #DCDDE1;}       
+.rectangle a:before {
+content: counter(li);
+counter-increment: li;
+position: absolute;
+left: -2.5em;
+top: 50%;
+margin-top: -1em;
+background: #9097A2;
+height: 2em;
+width: 2em;
+line-height: 2em;
+text-align: center;
+font-weight: bold;
+}
+.rectangle a:after {
+position: absolute;
+content: "";
+border: .5em solid transparent;
+left: -1em;
+top: 50%;
+margin-top: -.5em;
+transition: all .3s ease-out;
+}
+.rectangle a:hover:after {
+left: -.5em;
+border-left-color: #9097A2;
+}
+
+.square {
+  margin: 0;
+  counter-reset: li;
+  list-style: none;
+  background:#E8E8E8;
+  padding: 10px;
+}
+.square li {
+  position: relative;
+  margin: 0 0 10px 2em;
+  padding: 4px 8px;
+  border-top: 2px solid #787A77;
+  transition: .3s linear;
+}
+.square li:last-child {margin-bottom: 0;}
+.square li:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  top: -2px;
+  left: -2em;
+  width: 2em;
+  box-sizing: border-box;
+  margin-right: 8px;
+  padding: 4px;
+  border-top: 2px solid #787A77;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  background: #787A77;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  transition: .3s linear;
+}
+.square li:hover {border-top: 2px solid #389F70;}
+.square li:hover:before {
+  border: 2px solid #389F70;
+  background: #98EABA;
+}
+ 
+.messages {
+    padding:0;
+    list-style: none;
+}
+.messages li {
+    position: relative;
+    padding: 10px 30px;
+    background: grey;
+    border: 2px solid bleak;
+    color: #d7e0e0;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0, .2);
+    margin-bottom: 5px;
+    text-align:left;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+#user_name{
+    font-size: 20px;
+    font-style:normal;
+    color:#a4acff; 
+    font-weight:700;
+}
+
+#user_message {
+    font-size: 15px;
+    font-style:italic;
+    color: #a5fcff;
+    font-weight: 350;
+}
+
+.message_list {
+   float: left;
+    width: 69%;
+    height:300px;
+    overflow: auto;
+}
+
+
+.user_list{
+    float: right;
+    float-top: 10px;
+    width: 30%;
+}

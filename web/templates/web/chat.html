@@ -1,0 +1,79 @@
+{% extends 'web/base.html' %}
+
+{% block title %}
+	<title>Уберпростой чат</title>
+{% endblock %}
+
+{% block window %}
+
+<style>
+	body {
+	background-color: #ffffe0;
+	}
+</style>
+
+	<form method="post">
+		{% csrf_token %}
+	    <table>
+			{{ participant_form }}
+			<tr>
+				<td colspan="1">
+					<input type="submit" name="button" value="Add new participant"/>
+				</td>
+			</tr>
+	    </table>
+	</form>
+{% endblock %}
+
+{% block list %}
+<div class="user_list">
+	<ul class="square">
+	{% for user in users_list %}
+	        <li>
+	        	<a>{{ user.user_nickname }}</a>
+	        </li>
+	{% endfor %}
+	</ul>
+</div>
+{% endblock %}
+
+{% block content %}
+	{% if messages_list %}
+	<div class="message_list">
+	    <ul class="messages">
+        {% for message in messages_list %}
+            <li><a id="user_name">{{ message.sender.nickname }}</a>: <a id="#user_message"> {{message.message_text}}</a> 
+            	{% if message.attachment %}
+            	<!-- <img src="{{ message.attachment.url }}"> -->
+            	<a href="{{ message.attachment.url }}" download="">{{ message.attachment.name }}</a>
+            	{% endif %}
+            </li>
+        {% endfor %}
+		</ul>
+	</div>
+	{% else %}
+	    <p>Chat have not any messages now. You can send it first! :D</p>
+	{% endif %}
+
+	<div class="message_list" colspan="2">
+		<form method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+		    <table>
+				{{ message_form }}
+				<tr>
+					<td >
+						<input class="button_login" type="submit" name="button" value="Send message"/>
+					</td>
+				</tr>
+		    </table>
+		</form>
+	</div>
+{% endblock %}
+
+{% block extra_button %}
+<a href="/web/chats/{{ chat_id }}/exit/">Выйти из чата</a> 
+{% endblock %}
+
+{% block extra_button_2 %}
+<a href="/web/chats/">Обратно к списку чатов</a> 
+{% endblock %}

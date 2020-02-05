@@ -1,0 +1,45 @@
+{% extends 'web/base.html' %}
+
+{% block title %}    
+	<title>Chat list</title> 
+{% endblock %}
+
+{% block content %}
+
+<style>
+	body {
+	background-color: #fffacd;
+	}
+</style>
+
+
+	{% if chat_list %}
+	<div class = "chat_list">
+	    <ul class="rectangle">
+		
+		{% for chat in chat_list %}
+	        <li>
+				<a href="/web/chats/{{ chat.chat_id }}/"> {{ chat.chat_title }} </a>
+			</li>
+	    {% endfor %}
+
+		</ul>
+	</div>
+	{% else %}
+	    <p>You have not any chat now.</p>
+	{% endif %}
+	
+	<div class = "chat_list">
+		<form method="post">
+			{% csrf_token %}
+		    <table>
+				{{ chat_form }}
+				<tr>
+					<td colspan="1">
+						<input class="button_login" type="submit" name="button" value="Create new chat:"/>
+					</td>
+				</tr>
+		    </table>
+		</form>
+	</div>
+{% endblock %}

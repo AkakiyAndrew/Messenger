@@ -1,0 +1,17 @@
+{% extends 'web/base.html' %}
+
+{% block title %}    
+	<title>Registration</title> 
+{% endblock %}
+
+{% block window %}
+<div class="block_auth">
+	<form method="POST">
+	        {% csrf_token %}
+	    <table>
+	        {{ form }}
+	    </table>
+	    <input class="button_login" type="submit" value="Send" >
+	</form>
+</div>
+{% endblock %}
